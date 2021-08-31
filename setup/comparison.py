@@ -46,7 +46,7 @@ def deploy_labeled_noise_experiment():
 
 
 # ____deploy one table per experiment iteration
-# deploy_ipv4_experiment()
-# deploy_twitter_name_experiment()
-# deploy_full_name_experiment()
-# deploy_labeled_noise_experiment()
+deploy_ipv4_experiment()
+deploy_twitter_name_experiment()
+deploy_full_name_experiment()
+deploy_labeled_noise_experiment()
