@@ -1,0 +1,33 @@
+{
+  "clientToken": "83cabdeb-980e-417b-9ea2-8bafd9c7460d",
+  "createdAt": "2021-08-31T14:04:10.728Z",
+  "customDataIdentifierIds": [],
+  "description": null,
+  "initialRun": false,
+  "jobArn": "arn:aws:macie2:eu-central-1:450586606402:classification-job/95aa017e0f5f6825fbacebfac7169d7b",
+  "jobId": "95aa017e0f5f6825fbacebfac7169d7b",
+  "jobStatus": "COMPLETE",
+  "jobType": "ONE_TIME",
+  "lastRunErrorStatus": {
+    "code": "NONE"
+  },
+  "lastRunTime": "2021-08-31T14:04:15.965Z",
+  "name": "test3",
+  "s3JobDefinition": {
+    "bucketDefinitions": [
+      {
+        "accountId": "450586606402",
+        "buckets": [
+          "teiresias-evaluation-test3"
+        ]
+      }
+    ],
+    "scoping": {}
+  },
+  "samplingPercentage": 100,
+  "statistics": {
+    "approximateNumberOfObjectsToProcess": 0,
+    "numberOfRuns": 1
+  },
+  "tags": {}
+}

@@ -1,0 +1,209 @@
+[
+  {
+    "accountId": "450586606402",
+    "archived": false,
+    "category": "CLASSIFICATION",
+    "classificationDetails": {
+      "detailedResultsLocation": "s3://[export-config-not-set]/AWSLogs/450586606402/Macie/eu-central-1/95aa017e0f5f6825fbacebfac7169d7b/450586606402/565cc46d-eca1-38a7-b504-7b1793a64f0b.jsonl.gz",
+      "jobArn": "arn:aws:macie2:eu-central-1:450586606402:classification-job/95aa017e0f5f6825fbacebfac7169d7b",
+      "jobId": "95aa017e0f5f6825fbacebfac7169d7b",
+      "result": {
+        "additionalOccurrences": true,
+        "customDataIdentifiers": {
+          "detections": [],
+          "totalCount": 0
+        },
+        "mimeType": "text/csv",
+        "sensitiveData": [
+          {
+            "category": "PERSONAL_INFORMATION",
+            "detections": [
+              {
+                "count": 1000,
+                "occurrences": {
+                  "cells": [
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 3
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 4
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 5
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 6
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 7
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 8
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 9
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 10
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 12
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 13
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 15
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 17
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 18
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 20
+                    },
+                    {
+                      "cellReference": null,
+                      "column": 2,
+                      "columnName": "full_name",
+                      "row": 21
+                    }
+                  ]
+                },
+                "type": "NAME"
+              }
+            ],
+            "totalCount": 1000
+          }
+        ],
+        "sizeClassified": 96573,
+        "status": {
+          "code": "COMPLETE",
+          "reason": null
+        }
+      }
+    },
+    "count": 1,
+    "createdAt": "2021-08-31T14:07:10.831Z",
+    "description": "The object contains personal information such as first or last names, addresses, or identification numbers.",
+    "id": "e438112ea3fcaf244406abfa07b99b1f",
+    "partition": "aws",
+    "region": "eu-central-1",
+    "resourcesAffected": {
+      "s3Bucket": {
+        "allowsUnencryptedObjectUploads": "TRUE",
+        "arn": "arn:aws:s3:::teiresias-evaluation-test3",
+        "createdAt": "2021-08-31T13:56:49.000Z",
+        "defaultServerSideEncryption": {
+          "encryptionType": "NONE",
+          "kmsMasterKeyId": null
+        },
+        "name": "teiresias-evaluation-test3",
+        "owner": {
+          "displayName": "null",
+          "id": "11132901d0fc7b963c1d7f86a8a5956e873138d4cf5081916ce29ce40af7163b"
+        },
+        "publicAccess": {
+          "effectivePermission": "NOT_PUBLIC",
+          "permissionConfiguration": {
+            "accountLevelPermissions": {
+              "blockPublicAccess": {
+                "blockPublicAcls": false,
+                "blockPublicPolicy": false,
+                "ignorePublicAcls": false,
+                "restrictPublicBuckets": false
+              }
+            },
+            "bucketLevelPermissions": {
+              "accessControlList": {
+                "allowsPublicReadAccess": false,
+                "allowsPublicWriteAccess": false
+              },
+              "blockPublicAccess": {
+                "blockPublicAcls": true,
+                "blockPublicPolicy": true,
+                "ignorePublicAcls": true,
+                "restrictPublicBuckets": true
+              },
+              "bucketPolicy": {
+                "allowsPublicReadAccess": false,
+                "allowsPublicWriteAccess": false
+              }
+            }
+          }
+        },
+        "tags": []
+      },
+      "s3Object": {
+        "bucketArn": "arn:aws:s3:::teiresias-evaluation-test3",
+        "eTag": "d351fb798929d058cb2e6b0afabebeb6",
+        "extension": "csv",
+        "key": "test3.csv",
+        "lastModified": "2021-08-31T13:58:02.000Z",
+        "path": "teiresias-evaluation-test3/test3.csv",
+        "publicAccess": false,
+        "serverSideEncryption": {
+          "encryptionType": "NONE",
+          "kmsMasterKeyId": null
+        },
+        "size": 96573,
+        "storageClass": "STANDARD",
+        "tags": [],
+        "versionId": ""
+      }
+    },
+    "sample": false,
+    "schemaVersion": "1.0",
+    "severity": {
+      "description": "High",
+      "score": 3
+    },
+    "title": "The S3 object contains personal information.",
+    "type": "SensitiveData:S3Object/Personal",
+    "updatedAt": "2021-08-31T14:07:10.831Z"
+  }
+]
