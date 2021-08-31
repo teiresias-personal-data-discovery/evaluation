@@ -23,7 +23,7 @@
 
 ### ▶ preprocessing of source data
 
-- Twitter Friends Dataset (https://www.kaggle.com/hwassner/TwitterFriends) is too large to be committed.
+- Twitter Friends Dataset (https://www.kaggle.com/hwassner/TwitterFriends, last visited on 2021-08-31) is too large to be committed.
   - Download it to `setup/source_data/twitter_friends.csv` in order to process it accordingly
 - `setup/source_data/mock_users.json` has been generated via Node package _mocker-data-generator_:
 
