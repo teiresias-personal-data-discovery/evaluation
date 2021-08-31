@@ -1,0 +1,66 @@
+{
+  "jobId": "test1",
+  "inspectJob": {
+    "actions": [],
+    "inspectConfig": {
+      "infoTypes": [
+        {
+          "name": "CREDIT_CARD_NUMBER"
+        },
+        {
+          "name": "EMAIL_ADDRESS"
+        },
+        {
+          "name": "GCP_CREDENTIALS"
+        },
+        {
+          "name": "IMEI_HARDWARE_ID"
+        },
+        {
+          "name": "IP_ADDRESS"
+        },
+        {
+          "name": "MAC_ADDRESS"
+        },
+        {
+          "name": "MAC_ADDRESS_LOCAL"
+        },
+        {
+          "name": "PASSPORT"
+        },
+        {
+          "name": "PHONE_NUMBER"
+        },
+        {
+          "name": "US_BANK_ROUTING_MICR"
+        },
+        {
+          "name": "US_EMPLOYER_IDENTIFICATION_NUMBER"
+        },
+        {
+          "name": "US_INDIVIDUAL_TAXPAYER_IDENTIFICATION_NUMBER"
+        },
+        {
+          "name": "US_SOCIAL_SECURITY_NUMBER"
+        },
+        {
+          "name": "US_VEHICLE_IDENTIFICATION_NUMBER"
+        }
+      ],
+      "minLikelihood": "POSSIBLE"
+    },
+    "storageConfig": {
+      "cloudStorageOptions": {
+        "filesLimitPercent": 100,
+        "fileSet": {
+          "regexFileSet": {
+            "bucketName": "thesis_gbucket_1",
+            "includeRegex": [],
+            "excludeRegex": []
+          }
+        },
+        "fileTypes": ["FILE_TYPE_UNSPECIFIED"]
+      }
+    }
+  }
+}
