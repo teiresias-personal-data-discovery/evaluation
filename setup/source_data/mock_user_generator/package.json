@@ -1,0 +1,10 @@
+{
+  "name": "data-generator",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mocker-data-generator": "^2.12.0"
+  }
+}

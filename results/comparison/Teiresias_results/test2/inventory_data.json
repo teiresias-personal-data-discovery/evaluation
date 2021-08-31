@@ -1,0 +1,18 @@
+{
+  "_id": { "$oid": "611776a26970e9655957f9f7" },
+  "dag_run": "manual__2021-08-14T07:54:01.189024+00:00",
+  "date": { "$date": "2021-08-14T07:54:10.788Z" },
+  "storage_data_analyzer": {
+    "gcp.datastore": {
+      "meta_data_analysis": {
+        "storage_type": "postgre",
+        "test2": {
+          "number_of_entities": 5000,
+          "str_columns": ["twitter_name"],
+          "column_proximities": { "twitter_name": [["user_name", 67]] }
+        }
+      },
+      "data_analysis": { "test2": { "primary_keys": ["index"] } }
+    }
+  }
+}

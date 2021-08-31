@@ -1,0 +1,146 @@
+Teiresias DAG: B_storage_data_analysis
+
+____PostgreSQL table z; 500000 entities; 3 test iterations, each manually triggered
+
+mean of durations:
+mean([17.339943885803223, 18.000455141067505, 17.53610372543335]) = 17.625500917434692
+
+___test iteration 1: 
+end = 1628845367.1736536
+start = 1628845349.8337097
+duration = 17.339943885803223
+
+__logs of first task: "handle_storage_gcp.datastore"__
+
+[2021-08-13 09:02:29,665] {taskinstance.py:1107} INFO - Executing <Task(BranchPythonOperator): handle_storage_gcp.datastore> on 2021-08-13T09:02:27.698127+00:00
+[2021-08-13 09:02:29,676] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'B_storage_data_analysis', 'handle_storage_gcp.datastore', '2021-08-13T09:02:27.698127+00:00', '--job-id', '589', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/B__storage_data_analysis.py', '--cfg-path', '/tmp/tmpno1lsv23', '--error-file', '/tmp/tmpikq55w37']
+[2021-08-13 09:02:29,670] {standard_task_runner.py:52} INFO - Started process 4223 to run task
+[2021-08-13 09:02:29,677] {standard_task_runner.py:77} INFO - Job 589: Subtask handle_storage_gcp.datastore
+[2021-08-13 09:02:29,742] {logging_mixin.py:104} INFO - Running <TaskInstance: B_storage_data_analysis.handle_storage_gcp.datastore 2021-08-13T09:02:27.698127+00:00 [running]> on host 1f4d7f563806
+[2021-08-13 09:02:29,830] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=B_storage_data_analysis
+AIRFLOW_CTX_TASK_ID=handle_storage_gcp.datastore
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-13T09:02:27.698127+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-13T09:02:27.698127+00:00
+[2021-08-13 09:02:29,833] {logging_mixin.py:104} INFO - time_measurement_storage_handler__gcp.datastore__1628845349.8337097
+[2021-08-13 09:02:29,836] {python.py:151} INFO - Done. Returned value was: retrieve_postgres_meta_data_gcp.datastore
+[2021-08-13 09:02:29,837] {skipmixin.py:124} INFO - Following branch retrieve_postgres_meta_data_gcp.datastore
+[2021-08-13 09:02:29,851] {skipmixin.py:155} INFO - Skipping tasks ['retrieve_mongo_meta_data_gcp.datastore', 'circuit_gcp.datastore']
+[2021-08-13 09:02:29,936] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=B_storage_data_analysis, task_id=handle_storage_gcp.datastore, execution_date=20210813T090227, start_date=20210813T090229, end_date=20210813T090229
+[2021-08-13 09:02:30,013] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-13 09:02:30,057] {local_task_job.py:149} INFO - Task exited with return code 0
+
+
+__logs of last task: "process_data_analysis"__
+
+[2021-08-13 09:02:46,969] {taskinstance.py:1107} INFO - Executing <Task(Process_data_analysis): process_data_analysis> on 2021-08-13T09:02:27.698127+00:00
+[2021-08-13 09:02:46,978] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'B_storage_data_analysis', 'process_data_analysis', '2021-08-13T09:02:27.698127+00:00', '--job-id', '593', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/B__storage_data_analysis.py', '--cfg-path', '/tmp/tmp3_gu88wd', '--error-file', '/tmp/tmps3ab2zi4']
+[2021-08-13 09:02:46,974] {standard_task_runner.py:52} INFO - Started process 4263 to run task
+[2021-08-13 09:02:46,979] {standard_task_runner.py:77} INFO - Job 593: Subtask process_data_analysis
+[2021-08-13 09:02:47,037] {logging_mixin.py:104} INFO - Running <TaskInstance: B_storage_data_analysis.process_data_analysis 2021-08-13T09:02:27.698127+00:00 [running]> on host 1f4d7f563806
+[2021-08-13 09:02:47,110] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=B_storage_data_analysis
+AIRFLOW_CTX_TASK_ID=process_data_analysis
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-13T09:02:27.698127+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-13T09:02:27.698127+00:00
+[2021-08-13 09:02:47,173] {logging_mixin.py:104} INFO - time_measurement_Process_data_analysis_END__gcp.datastore__1628845367.1736536
+[2021-08-13 09:02:47,175] {logging_mixin.py:104} INFO - time_measurement_Process_data_analysis_END__ 1628845367.1751144
+[2021-08-13 09:02:47,186] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=B_storage_data_analysis, task_id=process_data_analysis, execution_date=20210813T090227, start_date=20210813T090246, end_date=20210813T090247
+[2021-08-13 09:02:47,216] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-13 09:02:47,236] {local_task_job.py:149} INFO - Task exited with return code 0
+
+
+___test iteration 2: 
+end = 1628845899.094973
+start = 1628845881.094518
+duration = 18.000455141067505
+
+__logs of first task: "handle_storage_gcp.datastore"__
+
+[2021-08-13 09:11:20,978] {taskinstance.py:1107} INFO - Executing <Task(BranchPythonOperator): handle_storage_gcp.datastore> on 2021-08-13T09:11:19.817441+00:00
+[2021-08-13 09:11:20,987] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'B_storage_data_analysis', 'handle_storage_gcp.datastore', '2021-08-13T09:11:19.817441+00:00', '--job-id', '595', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/B__storage_data_analysis.py', '--cfg-path', '/tmp/tmpe4el7odg', '--error-file', '/tmp/tmpr1x7iraw']
+[2021-08-13 09:11:20,983] {standard_task_runner.py:52} INFO - Started process 4926 to run task
+[2021-08-13 09:11:20,989] {standard_task_runner.py:77} INFO - Job 595: Subtask handle_storage_gcp.datastore
+[2021-08-13 09:11:21,037] {logging_mixin.py:104} INFO - Running <TaskInstance: B_storage_data_analysis.handle_storage_gcp.datastore 2021-08-13T09:11:19.817441+00:00 [running]> on host 1f4d7f563806
+[2021-08-13 09:11:21,093] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=B_storage_data_analysis
+AIRFLOW_CTX_TASK_ID=handle_storage_gcp.datastore
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-13T09:11:19.817441+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-13T09:11:19.817441+00:00
+[2021-08-13 09:11:21,094] {logging_mixin.py:104} INFO - time_measurement_storage_handler__gcp.datastore__1628845881.094518
+[2021-08-13 09:11:21,095] {python.py:151} INFO - Done. Returned value was: retrieve_postgres_meta_data_gcp.datastore
+[2021-08-13 09:11:21,096] {skipmixin.py:124} INFO - Following branch retrieve_postgres_meta_data_gcp.datastore
+[2021-08-13 09:11:21,104] {skipmixin.py:155} INFO - Skipping tasks ['retrieve_mongo_meta_data_gcp.datastore', 'circuit_gcp.datastore']
+[2021-08-13 09:11:21,154] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=B_storage_data_analysis, task_id=handle_storage_gcp.datastore, execution_date=20210813T091119, start_date=20210813T091120, end_date=20210813T091121
+[2021-08-13 09:11:21,188] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-13 09:11:21,205] {local_task_job.py:149} INFO - Task exited with return code 0
+
+
+__logs of last task: "process_data_analysis"__
+
+[2021-08-13 09:11:38,890] {taskinstance.py:1107} INFO - Executing <Task(Process_data_analysis): process_data_analysis> on 2021-08-13T09:11:19.817441+00:00
+[2021-08-13 09:11:38,900] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'B_storage_data_analysis', 'process_data_analysis', '2021-08-13T09:11:19.817441+00:00', '--job-id', '599', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/B__storage_data_analysis.py', '--cfg-path', '/tmp/tmp9gk6kksx', '--error-file', '/tmp/tmp1sarlzkz']
+[2021-08-13 09:11:38,896] {standard_task_runner.py:52} INFO - Started process 4957 to run task
+[2021-08-13 09:11:38,903] {standard_task_runner.py:77} INFO - Job 599: Subtask process_data_analysis
+[2021-08-13 09:11:38,975] {logging_mixin.py:104} INFO - Running <TaskInstance: B_storage_data_analysis.process_data_analysis 2021-08-13T09:11:19.817441+00:00 [running]> on host 1f4d7f563806
+[2021-08-13 09:11:39,051] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=B_storage_data_analysis
+AIRFLOW_CTX_TASK_ID=process_data_analysis
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-13T09:11:19.817441+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-13T09:11:19.817441+00:00
+[2021-08-13 09:11:39,095] {logging_mixin.py:104} INFO - time_measurement_Process_data_analysis_END__gcp.datastore__1628845899.094973
+[2021-08-13 09:11:39,096] {logging_mixin.py:104} INFO - time_measurement_Process_data_analysis_END__ 1628845899.0964763
+[2021-08-13 09:11:39,117] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=B_storage_data_analysis, task_id=process_data_analysis, execution_date=20210813T091119, start_date=20210813T091138, end_date=20210813T091139
+[2021-08-13 09:11:39,146] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-13 09:11:39,167] {local_task_job.py:149} INFO - Task exited with return code 0
+
+
+___test iteration 3: 
+end = 1628846950.358807
+start = 1628846932.8227034
+duration = 17.53610372543335
+
+__logs of first task: "handle_storage_gcp.datastore"__
+
+[2021-08-13 09:28:52,702] {taskinstance.py:1107} INFO - Executing <Task(BranchPythonOperator): handle_storage_gcp.datastore> on 2021-08-13T09:28:51.173981+00:00
+[2021-08-13 09:28:52,712] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'B_storage_data_analysis', 'handle_storage_gcp.datastore', '2021-08-13T09:28:51.173981+00:00', '--job-id', '601', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/B__storage_data_analysis.py', '--cfg-path', '/tmp/tmp_nwrfcgv', '--error-file', '/tmp/tmp1ag733op']
+[2021-08-13 09:28:52,713] {standard_task_runner.py:77} INFO - Job 601: Subtask handle_storage_gcp.datastore
+[2021-08-13 09:28:52,707] {standard_task_runner.py:52} INFO - Started process 6287 to run task
+[2021-08-13 09:28:52,767] {logging_mixin.py:104} INFO - Running <TaskInstance: B_storage_data_analysis.handle_storage_gcp.datastore 2021-08-13T09:28:51.173981+00:00 [running]> on host 1f4d7f563806
+[2021-08-13 09:28:52,821] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=B_storage_data_analysis
+AIRFLOW_CTX_TASK_ID=handle_storage_gcp.datastore
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-13T09:28:51.173981+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-13T09:28:51.173981+00:00
+[2021-08-13 09:28:52,822] {logging_mixin.py:104} INFO - time_measurement_storage_handler__gcp.datastore__1628846932.8227034
+[2021-08-13 09:28:52,823] {python.py:151} INFO - Done. Returned value was: retrieve_postgres_meta_data_gcp.datastore
+[2021-08-13 09:28:52,824] {skipmixin.py:124} INFO - Following branch retrieve_postgres_meta_data_gcp.datastore
+[2021-08-13 09:28:52,834] {skipmixin.py:155} INFO - Skipping tasks ['retrieve_mongo_meta_data_gcp.datastore', 'circuit_gcp.datastore']
+[2021-08-13 09:28:52,889] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=B_storage_data_analysis, task_id=handle_storage_gcp.datastore, execution_date=20210813T092851, start_date=20210813T092852, end_date=20210813T092852
+[2021-08-13 09:28:52,926] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-13 09:28:52,974] {local_task_job.py:149} INFO - Task exited with return code 0
+
+
+__logs of last task: "process_data_analysis"__
+
+[2021-08-13 09:29:10,212] {taskinstance.py:1107} INFO - Executing <Task(Process_data_analysis): process_data_analysis> on 2021-08-13T09:28:51.173981+00:00
+[2021-08-13 09:29:10,221] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'B_storage_data_analysis', 'process_data_analysis', '2021-08-13T09:28:51.173981+00:00', '--job-id', '605', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/B__storage_data_analysis.py', '--cfg-path', '/tmp/tmpapg3pv8r', '--error-file', '/tmp/tmpvl2z_85r']
+[2021-08-13 09:29:10,217] {standard_task_runner.py:52} INFO - Started process 6319 to run task
+[2021-08-13 09:29:10,222] {standard_task_runner.py:77} INFO - Job 605: Subtask process_data_analysis
+[2021-08-13 09:29:10,271] {logging_mixin.py:104} INFO - Running <TaskInstance: B_storage_data_analysis.process_data_analysis 2021-08-13T09:28:51.173981+00:00 [running]> on host 1f4d7f563806
+[2021-08-13 09:29:10,326] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=B_storage_data_analysis
+AIRFLOW_CTX_TASK_ID=process_data_analysis
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-13T09:28:51.173981+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-13T09:28:51.173981+00:00
+[2021-08-13 09:29:10,358] {logging_mixin.py:104} INFO - time_measurement_Process_data_analysis_END__gcp.datastore__1628846950.358807
+[2021-08-13 09:29:10,359] {logging_mixin.py:104} INFO - time_measurement_Process_data_analysis_END__ 1628846950.359738
+[2021-08-13 09:29:10,371] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=B_storage_data_analysis, task_id=process_data_analysis, execution_date=20210813T092851, start_date=20210813T092910, end_date=20210813T092910
+[2021-08-13 09:29:10,402] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-13 09:29:10,442] {local_task_job.py:149} INFO - Task exited with return code 0

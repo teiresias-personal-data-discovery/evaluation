@@ -1,0 +1,26 @@
+{
+  "_id": { "$oid": "611778736970e9655957fb87" },
+  "dag_run": "manual__2021-08-14T08:01:44.526122+00:00",
+  "date": { "$date": "2021-08-14T08:01:55.885Z" },
+  "storage_data_analyzer": {
+    "gcp.datastore": {
+      "meta_data_analysis": {
+        "storage_type": "postgre",
+        "test4": {
+          "number_of_entities": 5000,
+          "str_columns": ["user_name", "email", "address", "ip"],
+          "column_proximities": {
+            "user_name": [
+              ["user_name", 100],
+              ["user", 62]
+            ],
+            "email": [["email", 100]],
+            "address": [["address", 100]],
+            "ip": [["ip", 100]]
+          }
+        }
+      },
+      "data_analysis": { "test4": { "primary_keys": ["index"] } }
+    }
+  }
+}

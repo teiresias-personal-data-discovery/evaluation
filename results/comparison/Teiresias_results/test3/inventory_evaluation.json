@@ -1,0 +1,12 @@
+{
+  "gcp.datastore": {
+    "test3": {
+      "summary": {
+        "numberOfEntities": 5000,
+        "hasDataMatches": false,
+        "meanProximities": 0.67,
+        "collectionMetric": 0.67
+      }
+    }
+  }
+}
