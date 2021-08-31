@@ -42,7 +42,6 @@
 
 ```
 $ cd setup
-# uncomment function calls
 $ python3 comparison.py
 ```
 
@@ -50,6 +49,5 @@ $ python3 comparison.py
 
 ```
 $ cd setup
-# uncomment function calls
 $ python3 performance.py
 ```
